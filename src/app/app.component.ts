@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,21 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Assessment';
+  insertUrl = '';
+  
+  uploadedDeclarationFileName = '';
+
+  InputChange(fileInputEvent: any) {
+    const firstFile = fileInputEvent.target.files[0];
+    console.log(firstFile);
+    this.uploadedDeclarationFileName = firstFile.name;
+  }
+
+  ngOnInit(): void {
+    this.validateForm();
+  }
+
+  validateForm(){
+
+  }
 }

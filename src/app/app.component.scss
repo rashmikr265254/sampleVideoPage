@@ -1,0 +1,71 @@
+:host{
+    display: flex;
+    width : 100%;
+    height: 100vh; //viewport height
+    .side {
+        width : 90px;
+        z-index: 5;
+        box-shadow: 5px 0px 5px 3px rgba(0,0,0,0.39);
+        .nav {
+            align-items: center;
+        }
+        .logo {
+            width: 50px;
+            margin: 30px 0;
+        }
+        .my-nav-item {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 15px;
+            width: 88px;
+            cursor: pointer;
+            &.active {
+                background-color: #d0e0ed;
+                border-left: 2px solid #326ac4;
+            }
+            &:hover {
+                color: #326ac4;
+            }
+            .icon {
+                width: 30px;
+            }
+            .sub-text {
+                font-size: 10px;
+            }
+        }
+    }
+    .main {
+        flex-grow: 1;
+        background-color: #f4f5f7;
+        z-index: 3;
+        margin: 0%;
+        max-width: 100%;
+        .top-bar {
+            height:100px;
+            margin-bottom: 10px;
+            background-color: white;
+        }
+        .navbar {
+            height: 100px;
+            flex-direction: column;
+        }
+        .back-btn-container {
+            display: flex;
+            color: #89929d;
+            font-weight: bold;
+            .back {
+                margin-left: 10px;
+                height: 30px;
+            }
+        }
+        .center {
+            text-align: center;
+        }
+        .square-btn {
+            height: 150px;
+            width: 150px;
+        }
+    }
+}
